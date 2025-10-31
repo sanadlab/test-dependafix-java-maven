@@ -16,5 +16,10 @@ public class Application {
     public String greet(String name) {
         return "Hello, " + name + "!";
     }
+    
+    // This will cause compilation error - undefined method
+    public void testCompilationError() {
+        String result = undefinedMethod("test");
+    }
 }
 

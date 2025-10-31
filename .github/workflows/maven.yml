@@ -19,11 +19,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Build with Maven
+    - name: Build and Test
       run: mvn clean compile test
-
-    - name: Run tests
-      run: mvn test
 
     - name: Upload build logs
       if: always()

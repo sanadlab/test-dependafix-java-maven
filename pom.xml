@@ -11,9 +11,11 @@
     <packaging>jar</packaging>
 
     <name>DependaFix Test Repository</name>
+    <!-- Added comment for testing purposes -->
     <description>Test repository for DependaFix functional requirements testing</description>
 
     <properties>
+        <!-- Maven compiler configuration -->
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

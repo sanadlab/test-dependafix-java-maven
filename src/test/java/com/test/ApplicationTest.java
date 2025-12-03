@@ -10,15 +10,15 @@ public class ApplicationTest {
 
     @Test
     public void testGreet() {
-        Application app = new Application();
-        String result = app.greet("World");
+        Application.GreetingService service = new Application.GreetingService();
+        String result = service.greet("World");
         assertEquals("Hello, World!", result);
     }
 
     @Test
     public void testGreetWithDifferentName() {
-        Application app = new Application();
-        String result = app.greet("DependaFix");
+        Application.GreetingService service = new Application.GreetingService();
+        String result = service.greet("DependaFix");
         assertEquals("Hello, DependaFix!", result);
     }
 }

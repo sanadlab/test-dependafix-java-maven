@@ -18,6 +18,7 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.core.version>6.0.8</spring.core.version>
+        <spring.web.version>6.0.8</spring.web.version>
         <junit.version>5.8.2</junit.version>
         <mockito.version>4.3.1</mockito.version>
     </properties>
@@ -35,6 +36,20 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.core.version}</version>
+        </dependency>
+
+        <!-- Spring Web -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.web.version}</version>
+        </dependency>
+
+        <!-- Spring Web MVC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.web.version}</version>
         </dependency>
 
         <!-- JUnit 5 -->
@@ -77,4 +92,3 @@
     </build>
 
 </project>
-

@@ -9,16 +9,16 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ApplicationTest {
 
     @Test
-    public void testGreet() {
-        Application app = new Application();
-        String result = app.greet("World");
+    public void testGreetingService() {
+        Application.GreetingService service = new Application.GreetingService();
+        String result = service.greet("World");
         assertEquals("Hello, World!", result);
     }
 
     @Test
-    public void testGreetWithDifferentName() {
-        Application app = new Application();
-        String result = app.greet("DependaFix");
+    public void testGreetingServiceWithDifferentName() {
+        Application.GreetingService service = new Application.GreetingService();
+        String result = service.greet("DependaFix");
         assertEquals("Hello, DependaFix!", result);
     }
 }

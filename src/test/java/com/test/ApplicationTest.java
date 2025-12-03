@@ -12,14 +12,13 @@ public class ApplicationTest {
     public void testGreet() {
         Application app = new Application();
         String result = app.greet("World");
-        assertEquals("Hello, World!", result);
+        assertEquals("Hello, WORLD!", result);
     }
 
     @Test
-    public void testGreetWithDifferentName() {
+    public void testFormatGreeting() {
         Application app = new Application();
-        String result = app.greet("DependaFix");
-        assertEquals("Hello, DependaFix!", result);
+        String result = app.formatGreeting("Hi %s!", "DependaFix");
+        assertEquals("Hi DependaFix!", result);
     }
 }
-

@@ -25,7 +25,7 @@ public class Application {
      */
     public String greet(String name) {
         // ERROR: toUppercase() doesn't exist - should be toUpperCase()
-        return "Hello, " + name.toUppercase() + "!";
+        return "Hello, " + name.toUpperCase() + "!";
     }
 
     /**
@@ -34,6 +34,6 @@ public class Application {
      */
     public String formatGreeting(String template, String name) {
         // ERROR: formated() doesn't exist - should be formatted()
-        return template.formated(name);
+        return template.formatted(name);
     }
 }

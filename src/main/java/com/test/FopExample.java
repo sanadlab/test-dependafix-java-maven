@@ -2,6 +2,8 @@ package com.test;
 
 import org.apache.fop.apps.FopFactory;
 
+import java.io.File;
+
 /**
  * Example class demonstrating FOP usage with version 1.0 API.
  * 
@@ -16,11 +18,10 @@ public class FopExample {
 
     public static void main(String[] args) {
         try {
-            // OLD API (FOP 1.0): FopFactory.newInstance() - no parameters
-            // This will break when upgraded to FOP 2.2
-            FopFactory fopFactory = FopFactory.newInstance();
+            // NEW API (FOP 2.2): FopFactory.newInstance(new File(".").toURI())
+            FopFactory fopFactory = FopFactory.newInstance(new File(".").toURI());
             
-            System.out.println("FOP Factory created successfully with version 1.0 API");
+            System.out.println("FOP Factory created successfully with version 2.2 API");
             
         } catch (Exception e) {
             System.err.println("Error creating FOP Factory: " + e.getMessage());
@@ -33,9 +34,7 @@ public class FopExample {
      * This will cause compilation errors when FOP is upgraded to 2.2.
      */
     public FopFactory createFopFactory() {
-        // BREAKING CHANGE: This method signature changed in FOP 2.2
-        // Old: FopFactory.newInstance()
-        // New: FopFactory.newInstance(new File(".").toURI())
-        return FopFactory.newInstance();
+        // NEW API (FOP 2.2): FopFactory.newInstance(new File(".").toURI())
+        return FopFactory.newInstance(new File(".").toURI());
     }
 }

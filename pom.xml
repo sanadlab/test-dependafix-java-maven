@@ -52,6 +52,13 @@
             <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Apache FOP - version 1.0 (baseline with old API) -->
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>fop</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

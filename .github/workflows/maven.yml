@@ -2,7 +2,9 @@ name: Java CI with Maven
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ main, base/fop-1.0-test-v3 ]
+  push:
+    branches: [ base/fop-1.0-test-v3 ]
 
 jobs:
   build:

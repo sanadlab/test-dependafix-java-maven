@@ -20,20 +20,16 @@ public class Application {
     }
 
     /**
-     * Greet method with intentional compilation errors.
-     * Error 1: toUppercase() - method doesn't exist, should be toUpperCase()
+     * Greet method - fixed for FOP test baseline.
      */
     public String greet(String name) {
-        // ERROR: toUppercase() doesn't exist - should be toUpperCase()
-        return "Hello, " + name.toUppercase() + "!";
+        return "Hello, " + name.toUpperCase() + "!";
     }
 
     /**
-     * Format method with intentional compilation error.
-     * Error 2: formated() - method doesn't exist, should be formatted()
+     * Format method - fixed for FOP test baseline.
      */
     public String formatGreeting(String template, String name) {
-        // ERROR: formated() doesn't exist - should be formatted()
-        return template.formated(name);
+        return template.formatted(name);
     }
 }
